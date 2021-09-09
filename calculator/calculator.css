@@ -1,0 +1,238 @@
+
+* 
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: #131313;
+    font-family: 'DejaVu Sans', sans-serif;
+
+}
+
+#head
+{
+    width: 100%;
+    height: 5vh;
+    background: #1a1a1a;
+    border-bottom: 1px solid #5a5a5a;
+    position: fixed;
+    box-shadow: 0 -14px 40px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    top: 0px;
+}
+#calculator
+{
+    background: #1a1a1a;
+    margin-top: 14vh;   
+    width: 40vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 75vh;
+    border: 1px solid #5a5a5a;
+    box-shadow: 0 -14px 40px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#head #logo
+{
+    width: 10%;
+    height: 100%;
+    background: #2a2a2a;
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    transition: transform .1s;
+    cursor: pointer;
+    border-right: 1px solid #4a4a4a;
+}
+
+#head #logo #text
+{
+    width: 100%;
+    overflow-wrap: break-word;
+    height: auto;
+    text-align: center;
+    cursor: pointer;
+    font-weight: lighter;
+}
+
+#head #logo:hover
+{
+    background: #161616;
+}
+
+#head #logo:active
+{
+    background: rgb(0, 0, 0);
+    color: #fff;
+}
+
+
+#head #butt1, #head #butt2, #head #butt3
+{
+    width: 10%;
+    height: 100%;
+    background: #2a2a2a;
+    display: flex;
+    align-items: center;
+    transition: transform .1s;
+    cursor: pointe  r;
+    margin-top: -5vh;
+    float: right;
+    border-left: 1px solid #4a4a4a;
+    border-right: 1px solid #4a4a4a;
+    cursor: pointer;
+}
+#head #butt2
+{
+    margin-right: 10%;
+}
+
+#head #butt3
+{
+    margin-right: 20%;
+}
+
+#head #butt1:hover, #head #butt2:hover, #head #butt3:hover
+{
+    background: #161616;
+}
+
+#head #butt1:active, #head #butt2:active, #head #butt3:active
+{
+    background: rgb(0, 0, 0);
+    color: #fff;
+}
+
+
+#buttons
+{
+    height: 65%;
+    width: 90%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(10px, auto);
+    margin-left: auto;
+    margin-right: auto;
+}
+.baton
+{
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    background: rgb(12, 12, 12);
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    border: 1px solid #303030;
+}
+
+.te
+{
+    user-select: none; 
+    width: 100%;
+    overflow-wrap: break-word;
+    height: auto;
+    text-align: center;
+    cursor: pointer;
+    font-size: 3vh;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+#display
+{
+    width: 90%;
+    height: 15vh;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background: #2a2a2a;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-items: center;
+    text-align: end;
+    border: 1px solid #303030;
+}
+
+#display #shit
+{
+
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    font-size: 4vw;
+    color: #fff;
+    overflow-wrap: break-word;
+    box-sizing: content-box;
+    
+}
+
+#button19
+{
+    background: #bcecff;
+    color: #1a1a1a;
+}
+
+#button20, #button16, #button12, #button8
+{
+    background: #ffb86c;
+    color: #1a1a1a;
+}
+
+#button3, #button4
+{
+    background: #2a2a2a;
+    color: #fff;
+}
+
+.baton:hover
+{
+    background: rgb(32, 32, 32);
+}
+
+.baton:active
+{
+    background: rgb(43, 43, 43);
+}
+
+#button20:hover, #button16:hover, #button12:hover, #button8:hover
+{
+    background: #ffd3a4;
+}
+
+#button20:active, #button16:active, #button12:active, #button8:active
+{
+    background: #ffdfbd;
+}
+
+#button19:hover
+{
+    background: #89deff;
+}
+
+#button19:active
+{
+    background: #62d5ff;
+}
+
+#button3:hover, #button4:hover
+{
+    background: #464646;
+}
+
+#button3:active, #button4:active
+{
+    background: #8d8d8d;
+}

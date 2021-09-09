@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KALculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="head">
+        <div id="logo" onclick="s()">
+            <div id="text" onclick="s()">@govnovsky</div>
+        </div>
+    </div>
+    <div id="calculator">
+        <div id="display">
+            <div id="shit">0</div>
+        </div>
+        <div id="buttons">
+            <div class="baton" id="button1" onclick="bebra('(')">
+                <div class="te">(</div>
+            </div>
+            <div class="baton" id="button2" onclick="bebra(')')">
+                <div class="te">)</div>
+            </div>
+            <div class="baton"  id="button3" onclick="clearr()" >
+                <div class="te">c</div>
+            </div>
+            <div class="baton"  id="button4" onclick="back()">
+                <div class="te"><</div>
+            </div>
+            <div class="baton"  id="button5" onclick="bebra(1)">
+                <div class="te">1</div>
+            </div>
+            <div class="baton"  id="button6" onclick="bebra(2)" >
+                <div class="te">2</div>
+            </div>
+            <div class="baton"  id="button7" onclick="bebra(3)" >
+                <div class="te">3</div>
+            </div>
+            <div class="baton"  id="button8" onclick="bebra('/')" >
+                <div class="te">/</div>
+            </div>
+            <div class="baton"  id="button9" onclick="bebra(4)" >
+                <div class="te">4</div>
+            </div>
+            <div class="baton"  id="button10" onclick="bebra(5)" >
+                <div class="te">5</div>
+            </div>
+            <div class="baton"  id="button11" onclick="bebra(6)" >
+                <div class="te">6</div>
+            </div>
+            <div class="baton"  id="button12" onclick="bebra('*')" >
+                <div class="te">x</div>
+            </div>
+            <div class="baton"  id="button13" onclick="bebra(7)" >
+                <div class="te">7</div>
+            </div>
+            <div class="baton"  id="button14" onclick="bebra(8)" >
+                <div class="te">8</div>
+            </div>
+            <div class="baton"  id="button15" onclick="bebra(9)" >
+                <div class="te">9</div>
+            </div>
+            <div class="baton"  id="button16" onclick="bebra('-')" >
+                <div class="te">-</div>
+            </div>
+            <div class="baton" id="button17" onclick="bebra('.')">
+                <div class="te">.</div>
+            </div>
+            <div class="baton" id="button18" onclick="bebra(0)" >
+                <div class="te">0</div>
+            </div>
+            <div class="baton" id="button19" onclick="ready()">
+                <div class="te">=</div>
+            </div>
+            <div class="baton" id="button20" onclick="bebra('+')" >
+                <div class="te">+</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/textFit.js"></script>
+    <script src="calculator.js"></script>
+</body>
+</html>

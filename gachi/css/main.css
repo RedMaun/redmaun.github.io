@@ -1,0 +1,293 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: #fff;
+    font-family: 'DejaVu Sans', sans-serif;
+}
+
+#block, #butt
+{
+    width: 43vw;
+    height: 20vh;
+    background: #ff79c6;
+    color: #f8f8f2;
+    text-align: center;
+    line-height: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border-radius: 3vh;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#block
+{
+    font-style: oblique;
+    font-size: 3vw;
+    overflow-wrap: normal;
+}
+
+
+#butt
+{
+    width: 15vh;
+    height: 7vh;
+    line-height: 7vh;
+    background: #f8f8f2;
+    color: #282a36;
+    margin-top: 5vh;
+    border-radius: 1vh;
+    transition: transform .2s;
+    font-size: 2vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: none;
+}
+
+
+#butt:hover
+{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#footer
+{
+    font-family: "Dejavu Sans";
+    width: 100vw;
+    height: 5vh;
+    background: #f8f8f2;
+    color: #282a36;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    line-height: 5vh;
+    box-shadow: 0 -14px 40px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    font-weight: lighter;
+}
+
+#slave
+{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    top: 6vh;
+    transition: transform .1s;
+    cursor: pointer;
+    left: 35vw;
+    
+}
+
+#slave img
+{
+    width: 100%;
+    height: auto;
+    
+}
+
+#slave:hover
+{
+    transform: scale(1.2);
+}
+#block #back
+{
+    background: #ff79c6;
+    width: 13vh;
+    height: 10vh;
+    position: absolute;
+    top: -4vh;
+    left: 4.8vw;
+    z-index: 1;
+    border-radius: 2vh;
+}
+
+#block #test
+{   
+    font-family: 'DejaVu Sans Condensed Oblique', sans-serif;
+    font-style: normal;
+    width: 100px;
+    height: 100px;
+    color: #f8f8f2;
+    font-size: 4vh;
+    position: absolute;
+    top: -10vh;
+    left: 5vw;
+    z-index: 2;
+    font-weight: bold;
+}
+
+.q
+{
+    width: 70vw;
+    height: auto;
+    padding-bottom: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    margin-top: 5vh;
+    color: #282a36;
+    border-bottom: 1px solid #e6e6e6;
+    font-size:medium;
+
+}
+
+#top
+{
+    width: 100%;
+    height: 40vh;
+    background: #e6e6e6;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+#shadow
+{
+    width: 100%;
+    height: 5vh;
+    background: #fff;
+    color: #282a36;
+    box-shadow: 0 -40px 40px #bfbfbf;
+    font-weight: lighter;
+    z-index: 2;
+}
+
+#top img
+{
+    
+    width: 120vh;
+    height: 40vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.custom-radio {
+    position: relative;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    font-size:small;
+
+}
+
+
+  /* для элемента label связанного с .custom-radio */
+.custom-radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+/* создание в label псевдоэлемента  before со следующими стилями */
+.custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+/* стили при наведении курсора на радио */
+.custom-radio:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #b3d7ff;
+}
+/* стили для активной радиокнопки (при нажатии на неё) */
+.custom-radio:not(:disabled):active+label::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+}
+/* стили для радиокнопки, находящейся в фокусе */
+.custom-radio:focus+label::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+.custom-radio:focus:not(:checked)+label::before {
+    border-color: #80bdff;
+}
+/* стили для радиокнопки, находящейся в состоянии checked */
+.custom-radio:checked+label::before {
+    border-color: #0b76ef;
+    background-color: #0b76ef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+/* стили для радиокнопки, находящейся в состоянии disabled */
+.custom-radio:disabled+label::before {
+    background-color: #e9ecef;
+}
+
+#end
+{
+    margin-bottom: 20vh;
+    width: 15vh;
+    height: 7vh;
+    line-height: 7vh;
+    background: #fff;
+    color: #282a36;
+    text-align: center;
+    margin-top: 5vh;
+    border-radius: 1vh;
+    transition: transform .2s;
+    font-size: 2vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0px 40px rgba(0,0,0,0.25), 0 0px 40px rgba(0,0,0,0.22);
+    border-style: none;
+}
+
+
+#end:hover
+{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#blok, #blok1
+{
+    width: 500px;
+    height: 270px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 6vh;
+    left: 35vw;
+    
+}
+#blok1
+{
+    width: 250px;
+}
+
+
+
+#blok img, #blok1 img
+{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 -14px 40px rgba(0,0,0,0.25), 0 14px 40px rgba(0,0,0,0.22);
+}
+
+
+#result-text
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #282a36;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    font-size: 4vh;
+    
+}
