@@ -1,0 +1,244 @@
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'DejaVu Sans', sans-serif;
+    background: #fff;
+}
+
+
+#text_box
+{
+    width: 14vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 10vh;
+    font-size: 3vh;
+    color: #1a1a1a;
+}
+
+#text_box #text
+{
+    width: 100%;
+    text-align: center;
+}
+
+#text_input
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30vw;
+    height: 5vh;
+    background: #fff;
+    outline: none;
+    border: 1px solid #aaaaaa;
+    margin-top: 1vh;
+    border-radius: 2vh;
+    color: #1a1a1a;
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 6vh;
+    padding-right: 6vw;
+}
+
+#text_input:hover
+{
+    box-shadow: 0 5px 10px rgba(83, 83, 83, 0.25), 0 0px 10px rgba(83, 83, 83, 0.25);
+}
+
+#text_input:focus
+{
+    box-shadow: 0 5px 10px rgba(83, 83, 83, 0.25), 0 0px 10px rgba(83, 83, 83, 0.25);
+}
+
+
+#list
+{
+    color: #1a1a1a;
+    font-size: 2vh;
+    width: 60vw;
+    height: 30vh;
+    text-align: center;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+.trash
+{
+    background: #fff;
+    width: 3vh;
+    height: 3vh;
+    margin-left: 0.5vw;
+    position:absolute;
+    left: -5vh;
+    top: -0.5vh;
+    border: 1px solid #aaaaaa;
+    border-radius: 1vh;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li
+{
+    margin-top: 3vh;
+    height: auto;
+    width: 50vw;
+    position: relative;
+    right: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.trash:hover
+{
+    
+    border: 1px solid #a0e4ff;
+}
+
+.trash:focus
+{
+    border: 1px solid #a0e4ff;
+    outline: none;
+    box-shadow: 0 5px 10px rgba(83, 83, 83, 0.25), 0 0px 10px rgba(83, 83, 83, 0.25);
+}
+
+#clear
+{
+    display: block;
+    margin-left: 63.8vw;
+    margin-top: -11.3vh;
+    margin-bottom: 5vh;
+    width: 5vw;
+    height: 5.3vh;
+    border: 1px solid #aaaaaa;
+    border-top-right-radius: 2vh;
+    border-bottom-right-radius: 2vh;
+    border-left: 1px solid #aaaaaa;
+    padding-left: -5vh;
+    font-size: 1.8vh;
+}
+
+#clear:hover
+{
+    background: rgb(240, 240, 240);
+}
+
+.one:hover #text_input
+{
+    box-shadow: 0 5px 10px rgba(83, 83, 83, 0.25), 0 0px 10px rgba(83, 83, 83, 0.25);
+}
+
+#clear:active
+{
+    background: rgb(192, 192, 192);
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(241, 241, 241);
+    overflow-x: hidden;
+    transition: 0.1s;
+    z-index: 0;
+}
+
+.sidenav a, #title-text {
+    text-decoration: none;
+    background-color: rgb(241, 241, 241);
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.001s;
+}
+
+#title-text
+{
+    line-height: 6vh;
+    background: rgb(233, 233, 233);
+    height: 6vh;
+    color: #1a1a1a;
+    text-align: center;
+    display: block;
+    font-size: 2.5vh;
+    transition: 0.001s;
+    margin-bottom: 2vh;
+}
+
+.sidenav a:hover {
+    transition: 0.001s;
+    color: #f1f1f1;
+}
+
+
+#menu
+{
+    color: #1a1a1a;
+    font-style: oblique;
+    width: 6vh;
+    height: 6vh;
+    line-height: 6vh;
+    text-align: center;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    background-color: rgb(189, 188, 188);
+    z-index: 1;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.notes
+{
+    font-style: oblique;
+    font-weight:normal;
+    transition: 0.001s;
+    margin-top: 0.5vh;
+    margin-left: 3vh;
+    text-align: left;
+    color: #bebebe;
+    font-size: medium;
+    background-color: rgb(241, 241, 241);
+}
+
+#footer
+{
+    transition: 0.001s;
+    font-weight: lighter;
+    line-height: 5vh;
+    text-align: center;
+    width: 100%;
+    height: 5vh;
+    position: absolute;
+    background-color: rgb(241, 241, 241);
+    bottom: 0px;
+    color: #000000;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    cursor: pointer;
+}

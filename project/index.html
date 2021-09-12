@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="text_box">
+        <div id="text">TODO list</div>
+    </div>
+    <div class="one">
+        <input id="text_input">
+        <button id="clear" onclick="clearr()">clear</button>
+    </div>
+    <ul id="list"></ul>
+    <div id="mySidenav" class="sidenav">
+        <div id="title-text">Shortcuts</div>
+        <div class="notes">
+            alt+w focus on input field
+        </div>
+        <div class="notes">
+            alt+w again to unfocus
+        </div>
+        <div class="notes">
+            alt+q clear all notes
+        </div>
+        <div class="notes">
+            alt+w select note
+        </div>
+        <div class="notes">
+            space bar/enter to delete note
+        </div>
+        <div id="footer" onclick="s()">@govnovsky</div>   
+        </div>
+    </div>
+    <span style="font-size:30px;cursor:pointer" id="menu" onclick="openNav()">&#9776;</span>
+    <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>
