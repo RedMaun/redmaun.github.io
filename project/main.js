@@ -170,3 +170,13 @@ function s()
 {
     window.open("https://github.com/RedMaun");
 }
+
+function da()
+{
+    document.getElementsByClassName("one")[0].style.boxShadow = "0 5px 10px rgba(83, 83, 83, 0.25), 0 0px 10px rgba(83, 83, 83, 0.25)";
+}
+
+function net()
+{
+    document.getElementsByClassName("one")[0].style.boxShadow = ""   
+}
