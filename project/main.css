@@ -29,31 +29,49 @@
     text-align: center;
 }
 
-#text_input
+.one
 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display:flex;
+    flex-direction:row;
     width: 30vw;
     height: 5vh;
-    background: #fff;
-    outline: none;
-    border: 1px solid #aaaaaa;
-    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 2vh;
-    color: #1a1a1a;
-    text-align: left;
-    padding-left: 20px;
-    margin-bottom: 6vh;
-    padding-right: 6vw;
+    border: 1px solid #aaaaaa;
+    outline: none;
+    margin-bottom: 4vh;
 }
 
-#text_input:hover
+#text_input
+{
+    padding-left: 20px;
+    height: auto;
+    border-radius: 2vh;
+    flex-grow:2;
+    border: none;
+    outline: none;
+}
+
+#clear
+{
+    width: 5vw;
+    height: auto;
+    border-radius: 2vh;
+    border:none;
+    outline: none;
+}
+.one:hover
 {
     box-shadow: 0 5px 10px rgba(83, 83, 83, 0.25), 0 0px 10px rgba(83, 83, 83, 0.25);
 }
 
-#text_input:focus
+.one:focus
+{
+    box-shadow: 0 5px 10px rgba(83, 83, 83, 0.25), 0 0px 10px rgba(83, 83, 83, 0.25);
+}
+
+#text_input:focus > .one
 {
     box-shadow: 0 5px 10px rgba(83, 83, 83, 0.25), 0 0px 10px rgba(83, 83, 83, 0.25);
 }
@@ -118,31 +136,12 @@ li
     box-shadow: 0 5px 10px rgba(83, 83, 83, 0.25), 0 0px 10px rgba(83, 83, 83, 0.25);
 }
 
-#clear
-{
-    display: block;
-    margin-left: 63.8vw;
-    margin-top: -11.3vh;
-    margin-bottom: 5vh;
-    width: 5vw;
-    height: 5.3vh;
-    border: 1px solid #aaaaaa;
-    border-top-right-radius: 2vh;
-    border-bottom-right-radius: 2vh;
-    border-left: 1px solid #aaaaaa;
-    padding-left: -5vh;
-    font-size: 1.8vh;
-}
 
 #clear:hover
 {
     background: rgb(240, 240, 240);
 }
 
-.one:hover #text_input
-{
-    box-shadow: 0 5px 10px rgba(83, 83, 83, 0.25), 0 0px 10px rgba(83, 83, 83, 0.25);
-}
 
 #clear:active
 {
