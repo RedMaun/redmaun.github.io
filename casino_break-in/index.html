@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="main-box">
+        <div id="mac">взлом_казино.exe
+            <div id="nav">
+                <div id="ball1" class="balls"></div>
+                <div id="ball2" class="balls"></div>
+                <div id="ball3" class="balls"></div>
+            </div>
+        </div>
+        <div id="ramka">
+            <div id="text-box">
+                <div id="row1" class="tex">
+                    <div class="tex">Казино взломано на</div>
+                    <div class="tex" id="procent">0</div>
+                    <div class="tex" id="ab">%</div>
+                </div>
+                <div id="row2" class="tex">
+                    <div class="tex">Выкачано</div>
+                    <div id="amount" class="tex">0</div>
+                    <div class="tex">руб. из 70055020 руб.</div>
+                </div>
+                <div id="row3" class="tex">Продолжить?</div>
+            </div>
+            <div id="download">
+                <div id="polosa"></div>
+            </div>
+        </div>
+        <div id="row">
+            <button class="buttons" id="da" onclick="da()">Да</button>
+            <button class="buttons" id="net">Нет</button>
+        </div>
+    </div>
+    <div id="blank">
+        <div id="one">
+            <div id="blank-text">ЧТОБЫ ВЫВЕСТИ ДЕНЬГИ ВВЕДИТЕ СВОИ РЕКВИЗИТЫ</div>
+            <div id="warning">*это шутка, не нужно вводить свои данные</div>
+        </div>
+        <div id="bank">
+            <input class="in" type="text" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); splitt();" maxlength = "19" autocomplete="off" placeholder="CARD NUMBER" id="num"/>
+            <input class="in" autocomplete="off" placeholder="CARD OWNER" id="own"/>
+            <div id="exp">EXPIRATION</div>
+            <div id="exp-row">
+                <input class="in" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "2" autocomplete="off" placeholder="MM" id="month"/>
+                <div id="slash">
+                    <div id="slash-text">/</div>
+                </div>
+                <input class="in" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "2" autocomplete="off" placeholder="YY" id="year"/>
+                <div id="logo">
+                    <img id="aaa" src="logo.png">
+                </div>
+            </div>
+        </div>
+        <div id="bank-bank">
+            <div id="sq"></div>
+            <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "3" autocomplete="off" placeholder="CVC" id="cvc"/>
+        </div>
+    </div>
+
+    <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
