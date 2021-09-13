@@ -71,7 +71,11 @@ function script(k)
             {
                 var node = document.createElement('li');
                 if (storedNames[i] != null){
-                    node.appendChild(document.createTextNode(storedNames[i]));
+                    var inn = document.createElement('input');
+                    inn.value = storedNames[i];
+                    inn.className = "inn"
+                    inn.id = "0" + String(i);
+                    node.appendChild(inn);
                     var h = document.createElement('button');
                     h.className = "trash";
                     h.id = i;
@@ -180,3 +184,12 @@ function net()
 {
     document.getElementsByClassName("one")[0].style.boxShadow = ""   
 }
+
+$(document).ready(function() {
+    $('.inn').blur(function(event) {
+        var did = event.target.id;
+        var storedNames = JSON.parse(localStorage.getItem("list"));
+        storedNames[Number(did.substring(1))] = event.target.value;
+        localStorage.setItem('list', JSON.stringify(storedNames));
+    });
+});

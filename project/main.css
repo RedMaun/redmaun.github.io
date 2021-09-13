@@ -100,11 +100,12 @@
     margin-left: 0.5vw;
     position:absolute;
     left: -5vh;
-    top: -0.5vh;
+    top: 3.5vh;
     border: 1px solid #aaaaaa;
     border-radius: 1vh;
     cursor: pointer;
 }
+
 
 ul {
     list-style-type: none;
@@ -112,7 +113,6 @@ ul {
 
 li
 {
-    margin-top: 3vh;
     height: auto;
     width: 50vw;
     position: relative;
@@ -120,17 +120,16 @@ li
     margin-right: auto;
     margin-left: auto;
     text-align: left;
-    padding-bottom: 2vh;
     border-bottom: 1px solid #e0e0e0;
 }
 
-.trash:hover
+.trash:hover, .edit:hover
 {
     
     border: 1px solid #a0e4ff;
 }
 
-.trash:focus
+.trash:focus, .edit:focus
 {
     border: 1px solid #a0e4ff;
     outline: none;
@@ -240,4 +239,17 @@ li
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     cursor: pointer;
+}
+
+.inn
+{
+    width: 100%;
+    color: #1a1a1a;
+    outline: none;
+    border: none;
+    line-break: 4vh;
+    height: 2vh;
+    font-size: 2vh;
+    padding-bottom: 2vh;
+    padding-top: 4vh;
 }
