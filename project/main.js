@@ -186,10 +186,11 @@ function net()
 }
 
 $(document).ready(function() {
-    $('.inn').blur(function(event) {
+    $('.inn').keyup(function(event) {
         var did = event.target.id;
         var storedNames = JSON.parse(localStorage.getItem("list"));
         storedNames[Number(did.substring(1))] = event.target.value;
         localStorage.setItem('list', JSON.stringify(storedNames));
     });
 });
+
