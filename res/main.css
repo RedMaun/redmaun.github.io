@@ -16,11 +16,11 @@ body
 #triangle
 {
     width: 35%;
-    height: 20vh;
+    height: 16vh;
     background: white;
     position: absolute;
     left: 10%;
-    bottom: 5vh;
+    bottom: 9vh;
 }
 
 .text
@@ -29,14 +29,14 @@ body
     color: #1a1a1a;
     position: absolute;
     left: 17.5%;
-    bottom: 11vh;
+    bottom: 13vh;
 }
 
 #dot
 {
     font-size: 3vh;
     left: 34.5%;
-    bottom: 9vh;
+    bottom: 11vh;
 }
 #red
 {
