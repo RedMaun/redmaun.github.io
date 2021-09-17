@@ -15,7 +15,7 @@ body
 
 #triangle
 {
-    width: 35%;
+    width: 25%;
     height: 16vh;
     background: white;
     position: absolute;
@@ -28,19 +28,19 @@ body
     font-size: 6vh;
     color: #1a1a1a;
     position: absolute;
-    left: 17.5%;
-    bottom: 13vh;
+    left: 15%;
+    bottom: 15vh;
 }
 
 #dot
 {
     font-size: 3vh;
-    left: 34.5%;
-    bottom: 11vh;
+    left: 27%;
+    bottom: 12vh;
 }
 #red
 {
-    font-size: 8vh;
+    font-size: 6vh;
 }
 
 #textbox
