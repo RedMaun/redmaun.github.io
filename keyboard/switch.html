@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+    <style>
+        * {
+	box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 1.4rem;
+        background-color: black;
+    }
+
+    #bound-one {
+        background: black;
+    }
+    .scroll-bound {
+        height: 500vh;
+    }
+    .content {
+        height: 100vh;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    video {
+        width: 80%;
+    }
+
+
+    </style>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        #head
+        {
+            z-index: 2;
+            background-color: #1a1a1a;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        body
+        {
+            overflow: hidden;
+            -ms-overflow-style: none; 
+            scrollbar-width: none;
+        }
+        #logo
+        {
+            background-color: rgb(236, 236, 236);
+            border-style: none;
+            border-bottom: 2px solid #ffa13d;
+        }
+        #mag, #about, #logo
+        {
+            background-color: #1a1a1a;
+        }
+        #head button
+        {
+            color: white;
+        }
+        #keycup
+        {
+            background-color: #ffa94e;
+        }
+        #keycup:hover
+        {
+            background-color: #ff9c33;
+        }
+        #keycup:active
+        {
+            background-color: #ff9019;
+        }
+        #mag:hover, #about:hover, #logo:hover
+        {
+            background-color: #2a2a2a;
+        }
+        #mag:active, #about:active, #logo:active
+        {
+            background-color: #4a4a4a;
+        }
+        *,
+        :after,
+        :before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
+
+        section {
+        height: 100vh;
+        width: 100%;
+        display: table;
+        
+        }
+        section.ok{
+        background-color: #555;
+        }
+
+        p{
+        color: white;
+        font-family: arial;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        }
+
+        .scroll-down {
+        opacity: 1;
+        -webkit-transition: all .5s ease-in 3s;
+        transition: all .5s ease-in 3s;
+        }
+
+        .scroll-down {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        margin-left: -16px;
+        display: block;
+        width: 32px;
+        height: 32px;
+        border: 2px solid #FFF;
+        background-size: 14px auto;
+        border-radius: 50%;
+        z-index: 1;
+        -webkit-animation: bounce 2s infinite 2s;
+        animation: bounce 2s infinite 2s;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+        }
+
+        .scroll-down:before {
+            position: absolute;
+            top: calc(50% - 8px);
+            left: calc(50% - 6px);
+            transform: rotate(-45deg);
+            display: block;
+            width: 12px;
+            height: 12px;
+            content: "";
+            border: 2px solid white;
+            border-width: 0px 0 2px 2px;
+        }
+
+        @keyframes bounce {
+        0%,
+        100%,
+        20%,
+        50%,
+        80% {
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            transform: translateY(0);
+        }
+        40% {
+            -webkit-transform: translateY(-10px);
+            -ms-transform: translateY(-10px);
+            transform: translateY(-10px);
+        }
+        60% {
+            -webkit-transform: translateY(-5px);
+            -ms-transform: translateY(-5px);
+            transform: translateY(-5px);
+        }
+        }
+        #ad
+        {
+
+            height: 100vh;
+            background-color: #4a4a4a;
+        }
+        #dd
+        {
+            transition: 1000ms linear;
+            opacity: 0;
+        }
+        video
+        {
+            transition: 1000ms linear;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body onload="bebra()">
+    <div id="head">
+        <div id="row">
+            <a href="index.html">
+                <button id="logo" class="left">Главная</button>
+            </a>
+            <a href="mag.html">
+                <button id="mag" class="right">Магазин</button>
+            </a>
+            <a href="switch.html">
+                <button id="keycup" class="right">Свитч</button>
+            </a>
+            <a href="about.html">
+                <button id="about" class="right">Про нас</button>
+            </a>
+        </div> 
+    </div>
+    <section id="dd">
+        <p>SCROLL DOWN</p>
+        <a href="#" class="scroll-down" address="true"></a>
+    </section>
+
+    <div class="app">
+        <div id="bound-one" class="scroll-bound">
+            <div class="content">
+                 <video width="600" muted preload>
+                    <source src="2.mp4" type="video/mp4">
+                    <p>Your user agent does not support the HTML5 Video element.</p>
+          </video>
+            </div>
+        </div>
+    </div>
+    <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script> 
+    <script>
+    const registerVideo = (bound, video) => {
+	bound = document.querySelector(bound);
+	video = document.querySelector(video);
+	const scrollVideo = ()=>{
+		if(video.duration) {
+			const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
+			const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
+			const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
+			
+			video.currentTime = video.duration * percentScrolled;
+		}
+		requestAnimationFrame(scrollVideo);
+	}
+	requestAnimationFrame(scrollVideo);
+}
+
+
+registerVideo("#bound-one", "#bound-one video");
+
+registerVideo("#bound-two", "#bound-two video")
+
+registerVideo("#bound-three", "#bound-three video")
+    </script>
+    <script>
+         $(function() {
+        $('.scroll-down').click (function() {
+        $('html, body').animate({scrollTop: $('div.app').offset().top }, 'slow');
+        document.body.style.overflow = "auto";
+        setTimeout(() => {document.querySelector('video').style.opacity = '1'}, 500);
+        return false;
+        });
+    });
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
+    function bebra()
+    {
+        document.getElementById('dd').style.opacity = '1';
+    }
+    </script>
+</body>
+</html>
