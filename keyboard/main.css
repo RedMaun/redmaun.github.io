@@ -127,7 +127,7 @@ a
 #block1
 {
     display: block;
-    height: 65%;
+    height: 55%;
     overflow: none;
 }
 
@@ -175,9 +175,10 @@ a
 #block2
 {
     display: block;
-    height: 35%;
+    height: 45%;
     background-image: url('back2.png');
     background-repeat: no-repeat;
+    background-size: auto 100%;
     background-position: center top;
     background-attachment: fixed;
     opacity: 0.9;
