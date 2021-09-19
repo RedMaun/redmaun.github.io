@@ -55,6 +55,8 @@
             grid-row-gap: 100px;
             grid-column-gap: 100px;
             justify-content: center;
+            opacity: 0;
+            transition: 200ms linear;
         }
         .obj
         {
@@ -130,9 +132,18 @@
             </a>
         </div> 
     </div>
-    <div id="main-box"></div>
+    <div id="main-box">
+    </div>
     </div>
     <div id="space"></div>
     <script src="mag.js"></script>
+    <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script> 
+    <script>
+        var main = document.getElementById('main-box')
+        if (main != null)
+        {
+            main.style.opacity = "1";
+        }
+    </script>
 </body>
 </html>
