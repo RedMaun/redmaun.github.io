@@ -128,7 +128,7 @@ a
 {
     display: block;
     height: 65%;
-    overflow: auto;
+    overflow: none;
 }
 
 #title, #main
