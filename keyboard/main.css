@@ -10,15 +10,6 @@ html, body
     height: 100%;
 }
 
-body::-webkit-scrollbar {
-    display: none;
-}
-body
-{
-    overflow: hidden;
-    -ms-overflow-style: none; 
-    scrollbar-width: none;
-}
 
 #head
 {
@@ -32,6 +23,7 @@ body
 
 #head button
 {
+    cursor: pointer;
     width: 8vw;
     height: 6vh;
     display: inline-block;

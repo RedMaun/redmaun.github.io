@@ -7,6 +7,16 @@
     <title>Shop</title>
     <link rel="stylesheet" href="main.css">
     <style>
+        #head
+        {
+            z-index: 2;
+            width: 100vw;
+        }
+        body
+        {
+            overflow: scroll;
+            overflow-x: hidden;
+        }
         #mag
         {
             background-color: #ffb86c;
@@ -34,9 +44,74 @@
         {
             background-color: #b6b6b6;
         }
-        h1
+        #main-box
         {
-            margin-top: 20vh;
+            margin-top: 15vh;
+            width: 100%;
+            height: auto;
+            display: inline-grid;
+            grid-template-rows: repeat(1, 400px);
+            grid-template-columns: repeat(3, 350px);
+            grid-row-gap: 100px;
+            grid-column-gap: 100px;
+            justify-content: center;
+        }
+        .obj
+        {
+            width: 350px;
+            height: 400px;
+            position: relative;
+            display: grid;
+            grid-row-gap: 0px;
+            border-radius: 2vh;
+            cursor: pointer;
+        }
+        .obj:hover
+        {
+            box-shadow: 0px 14px 23px -1px rgba(34, 60, 80, 0.2);
+        }
+        #space
+        {
+            display: block;
+            height: 5vh;
+        }
+
+        .price
+        {
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.5em;
+            padding-left: 20px;
+            color: #1a1a1a;
+            
+        }
+        .tit
+        {
+            padding-left: 20px;
+            padding-right: 20px;
+            display: block;
+            height: 70px;
+            font-size: 1.2em;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            overflow: hidden;
+            max-height: 2.4em;
+            color: #858585;
+        }
+        .image
+        {
+            display: block;
+            height: 280px;
+            width: 80%;
+            margin: auto;
+            background-size: 100% 100%;
+            border-top-left-radius: 2vh;
+            border-top-right-radius: 2vh;
+        }
+        #one
+        {
+            background-image: url('1.jpg');
         }
     </style>
 </head>
@@ -57,6 +132,9 @@
             </a>
         </div> 
     </div>
-    <h1>Пака нигатово.....</h1>
+    <div id="main-box"></div>
+    </div>
+    <div id="space"></div>
+    <script src="mag.js"></script>
 </body>
 </html>
