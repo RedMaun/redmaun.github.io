@@ -170,7 +170,7 @@ a
     height: 45%;
     background-image: url('back2.png');
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: 100% 100%;
     background-position: center top;
     background-attachment: fixed;
     opacity: 0.9;
