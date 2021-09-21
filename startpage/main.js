@@ -108,7 +108,7 @@ ok.onclick = function()
             }
         }
     };  
-    row1.appendChild(element)
+    row2.appendChild(element)
     update_edit();
     update();
     popup.style.opacity = "0";
