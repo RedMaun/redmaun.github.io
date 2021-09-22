@@ -95,7 +95,22 @@ body
     cursor: pointer;
 }
 
-.block:hover
+.cont
+{
+    display: flex;
+    justify-self: center;
+    width: 14vh;
+    height: 14vh;
+    border-radius: 1vh;
+    position: relative;
+    cursor: pointer;
+}
+.cont:hover .edit
+{
+    opacity: 1;
+}
+
+.cont:hover
 {
     background-color: #1a1a1a1c;
 }
@@ -130,6 +145,11 @@ body
     user-select: none;
 }
 
+a, a:hover, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
 .edit
 {
     width: 3vh;
@@ -154,14 +174,9 @@ body
     user-select: none;
 }
 
-.block:hover .edit:hover
+.cont:hover .edit:hover
 {
     background-color: #1a1a1a18;
-}
-
-.block:hover .edit
-{
-    opacity: 1;
 }
 
 #plus

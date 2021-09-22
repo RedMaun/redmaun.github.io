@@ -71,44 +71,52 @@ cancel.onclick = function()
 
 ok.onclick = function() 
 {
+    if (named.value.length > 9)
+    {
+        var newStr = '';
+        for (var g = 0; g < 9; g++)
+        {
+            newStr += named.value[g];
+        }
+        newStr += '...';
+        named.value = newStr;
+    }
+    
+    var url = link.value;
+    if (!url.includes("https://"))
+    {
+        url = "https://" + url;
+    }
+
+    var cont = document.createElement("div");
+    cont.className = "cont";
+
+    var atag = document.createElement("a");
+    atag.href = url;
+
     var element = document.createElement("div");
     element.className = "block";
-    element.value = link.value;
+
     var ic = document.createElement("div");
     ic.className = "block-icon";
-    ic.style.backgroundImage = "url(" + 'https://s2.googleusercontent.com/s2/favicons?domain=' + link.value + ")";
+    ic.style.backgroundImage = "url(" + 'https://www.google.com/s2/favicons?sz=64&domain_url=' + url + ")";
     element.appendChild(ic);
+
     var te = document.createElement("div");
     te.className = "block-text";
     te.innerHTML = named.value;
     element.appendChild(te);
+
+    atag.appendChild(element)
+    cont.appendChild(atag)
+
     var ed = document.createElement("button");
     ed.innerHTML = '⋮';
     ed.className = "edit";
-    element.appendChild(ed);
-    if (!link.value.includes("https://"))
-    {
-        element.value = "https://" + link.value;
-    }
-    else
-    {
-        element.value = link.value;
-    }
-    element.onclick = function(event) 
-    {
-        if (event.target.className != "edit")
-        {
-            if (event.target.className == "block-text" || event.target.className == "block-icon")
-            {
-                window.open(event.target.parentNode.value);
-            }
-            else
-            {
-                window.open(event.target.value);
-            }
-        }
-    };  
-    row2.appendChild(element)
+    cont.appendChild(ed)
+
+    var row = add.parentNode; 
+    row.appendChild(cont)
     update_edit();
     update();
     popup.style.opacity = "0";
@@ -144,9 +152,9 @@ link.onkeyup = function()
 
 function update()
 {
-    var a = row1.getElementsByClassName('block');
+    var a = row1.getElementsByClassName('cont');
     n1 = a.length;
-    var b = row2.getElementsByClassName('block');
+    var b = row2.getElementsByClassName('cont');
     n2 = b.length;
     if (n1 >= 6 && n2 == 0)
     {
@@ -179,88 +187,96 @@ function update()
     if (n1 == 4 && n2 == 2)
     {
         row2.appendChild(a[a.length - 1])
-        row2.getElementsByClassName('block')[1].style.gridColumnStart = ""
-        row2.getElementsByClassName('block')[2].style.gridColumnStart = "1";
+        row2.getElementsByClassName('cont')[1].style.gridColumnStart = ""
+        row2.getElementsByClassName('cont')[2].style.gridColumnStart = "1";
     }
     update_storage();
 }
 
 function update_storage()
 {
-    var a = row1.getElementsByClassName('block');
+    var a = row1.getElementsByClassName('cont');
     n1 = a.length;
-    var b = row2.getElementsByClassName('block');
+    var b = row2.getElementsByClassName('cont');
     n2 = b.length;
     var list = [];
     for (var i = 0; i < n1; i++)
     {
         if (a[i] != add)
         {
-            list.push([a[i].getElementsByClassName('block-text')[0].innerText, a[i].value])
+            list.push([a[i].getElementsByClassName('block-text')[0].innerText, a[i].getElementsByTagName('a')[0].href])
         }
     }
     for (var i = 0; i < n2; i++)
     {
         if (b[i] != add)
         {
-            list.push([b[i].getElementsByClassName('block-text')[0].innerText, b[i].value])
+            list.push([b[i].getElementsByClassName('block-text')[0].innerText, b[i].getElementsByTagName('a')[0].href])
         }
     }
     localStorage.removeItem('list');
     localStorage.setItem('list', JSON.stringify([list]));
-    console.log('lol')
 }
 
 function load_storage()
 {
     var store = JSON.parse(localStorage.getItem('list'));
-    //console.log(store[0][1])
-    for (var i = 0; i < store[0].length; i++)
+    if (store != null)
     {
-        var na = store[0][i][0];
-        var url = store[0][i][1];
-        
-        var element = document.createElement("div");
-        element.className = "block";
-        element.value = url;
-        var ic = document.createElement("div");
-        ic.className = "block-icon";
-        ic.style.backgroundImage = "url(" + 'https://s2.googleusercontent.com/s2/favicons?domain=' + url + ")";
-        element.appendChild(ic);
-        var te = document.createElement("div");
-        te.className = "block-text";
-        te.innerHTML = na;
-        element.appendChild(te);
-        var ed = document.createElement("button");
-        ed.innerHTML = '⋮';
-        ed.className = "edit";
-        element.appendChild(ed);
-        if (!url.includes("https://"))
+        for (var i = 0; i < store[0].length; i++)
         {
-            element.value = "https://" + url;
-        }
-        else
-        {
-            element.value = url;
-        }
-        element.onclick = function(event) 
-        {
-            if (event.target.className != "edit")
+            var na = store[0][i][0];
+            if (na.length > 9)
             {
-                if (event.target.className == "block-text" || event.target.className == "block-icon")
+                var newStr = '';
+                for (var g = 0; g < 9; g++)
                 {
-                    window.open(event.target.parentNode.value);
+                    newStr += na[g];
                 }
-                else
-                {
-                    window.open(event.target.value);
-                }
+                newStr += '...';
+                na = newStr;
             }
-        };  
-        row1.appendChild(element)
-        update_edit();
-        update();
+
+            var url = store[0][i][1];
+            if (!url.includes("https://"))
+            {
+                url = "https://" + url;
+            }
+
+            var cont = document.createElement("div");
+            cont.className = "cont";
+
+            var atag = document.createElement("a");
+            atag.href = url;
+
+            var element = document.createElement("div");
+
+            var ic = document.createElement("div");
+            ic.className = "block-icon";
+            ic.style.backgroundImage = "url(" + 'https://www.google.com/s2/favicons?sz=64&domain_url=' + url + ")";
+            element.appendChild(ic);
+
+            var te = document.createElement("div");
+            te.className = "block-text";
+            te.innerHTML = na;
+            element.appendChild(te);
+
+            atag.appendChild(element)
+            cont.appendChild(atag)
+
+            var ed = document.createElement("button");
+            ed.innerHTML = '⋮';
+            ed.className = "edit";
+            cont.appendChild(ed)
+            
+            var row = add.parentNode; 
+            row.appendChild(cont)
+            update_edit();
+            update();
+        }
     }
 
 }
-load_storage()
+$( document ).ready(function() {
+    load_storage();
+});
