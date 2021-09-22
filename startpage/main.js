@@ -166,6 +166,10 @@ function update()
     {
         for (var i = 0; i < n2; i++)
         {
+            if (b[0] != add)
+            {
+                b[0].style.gridColumnStart = "";
+            }
             row1.appendChild(b[0]);
         }
     }
@@ -181,6 +185,10 @@ function update()
     {
         for (var i = 0; i < n2; i++)
         {
+            if (b[0] != add)
+            {
+                b[0].style.gridColumnStart = "";
+            }
             row1.appendChild(b[0]);
         }
     }
