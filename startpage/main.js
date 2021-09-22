@@ -258,7 +258,7 @@ function load_storage()
             atag.href = url;
 
             var element = document.createElement("div");
-
+            element.className = "block";
             var ic = document.createElement("div");
             ic.className = "block-icon";
             ic.style.backgroundImage = "url(" + 'https://www.google.com/s2/favicons?sz=64&domain_url=' + url + ")";
