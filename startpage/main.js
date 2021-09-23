@@ -99,7 +99,18 @@ ok.onclick = function()
 
     var ic = document.createElement("div");
     ic.className = "block-icon";
-    ic.style.backgroundImage = "url(" + 'https://www.google.com/s2/favicons?sz=64&domain_url=' + url + ")";
+    if (url.includes("github.com"))
+    {
+        ic.style.backgroundImage = "url(" + 'https://github.githubassets.com/favicons/favicon.svg' + ")";
+    }
+    else if (url.includes("gmail.com"))
+    {
+        ic.style.backgroundImage = "url(" + 'https://www.gstatic.com/images/branding/product/2x/gmail_2020q4_32dp.png' + ')';
+    }
+    else
+    {
+        ic.style.backgroundImage = "url(" + 'https://www.google.com/s2/favicons?sz=64&domain_url=' + url + ")";
+    }
     element.appendChild(ic);
 
     var te = document.createElement("div");
@@ -261,7 +272,18 @@ function load_storage()
             element.className = "block";
             var ic = document.createElement("div");
             ic.className = "block-icon";
-            ic.style.backgroundImage = "url(" + 'https://www.google.com/s2/favicons?sz=64&domain_url=' + url + ")";
+            if (url.includes("github.com"))
+            {
+                ic.style.backgroundImage = "url(" + 'https://github.githubassets.com/favicons/favicon.svg' + ")";
+            }
+            else if (url.includes("gmail.com"))
+            {
+                ic.style.backgroundImage = "url(" + 'https://www.gstatic.com/images/branding/product/2x/gmail_2020q4_32dp.png' + ')';
+            }
+            else
+            {
+                ic.style.backgroundImage = "url(" + 'https://www.google.com/s2/favicons?sz=64&domain_url=' + url + ")";
+            }
             element.appendChild(ic);
 
             var te = document.createElement("div");
